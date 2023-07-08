@@ -1,0 +1,656 @@
+- http:
+    method: GET
+    path: /root
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books base
+- http:
+    method: GET
+    path: /api/books/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books2
+- http:
+    method: GET
+    path: /api/books2/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books2/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books2/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books2/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books2/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books3
+- http:
+    method: GET
+    path: /api/books3/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books3/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books3/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books3/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books3/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books4
+- http:
+    method: GET
+    path: /api/books4/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books4/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books4/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books4/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books4/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books5
+- http:
+    method: GET
+    path: /api/books5/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books5/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books5/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books5/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books5/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books6
+- http:
+    method: GET
+    path: /api/books6/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books6/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books6/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books6/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books6/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books7
+- http:
+    method: GET
+    path: /api/books7/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books7/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books7/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books7/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books7/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books8
+- http:
+    method: GET
+    path: /api/books8/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books8/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books8/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books8/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books8/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books9
+- http:
+    method: GET
+    path: /api/books9/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books9/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books9/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books9/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /api/books9/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+## SERVICES
+
+# books
+- http:
+    method: GET
+    path: /services/books/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books2
+- http:
+    method: GET
+    path: /services/books2/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books2/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books2/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books2/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books2/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books3
+- http:
+    method: GET
+    path: /services/books3/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books3/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books3/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books3/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books3/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books4
+- http:
+    method: GET
+    path: /services/books4/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books4/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books4/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books4/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books4/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books5
+- http:
+    method: GET
+    path: /services/books5/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books5/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books5/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books5/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books5/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books6
+- http:
+    method: GET
+    path: /services/books6/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books6/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books6/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books6/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books6/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books7
+- http:
+    method: GET
+    path: /services/books7/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books7/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books7/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books7/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books7/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books8
+- http:
+    method: GET
+    path: /services/books8/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books8/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books8/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books8/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books8/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+# books9
+- http:
+    method: GET
+    path: /services/books9/random-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books9/list-books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books9/books
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books9/book_by_index/{index}
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam
+
+- http:
+    method: GET
+    path: /services/books9/get-book
+    integration: lambda-proxy
+    cors: true
+    authorizer: aws_iam

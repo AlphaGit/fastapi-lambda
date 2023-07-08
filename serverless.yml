@@ -1,0 +1,71 @@
+service: backend-api
+frameworkVersion: "3"
+useDotenv: true
+
+provider:
+  name: aws
+  region: ${opt:region, 'us-east-1'}
+  stackName: backend-api
+  profile: ${file(./env.yml):AWS_PROFILE}
+  deploymentBucket:
+    serverSideEncryption: AES256
+    blockPublicAccess: true
+    name: ${file(./env.yml):DEPLOYMENT_BUCKET}
+  apiGateway:
+    restApiId: ${file(./env.yml):API_GW_ID}
+    restApiRootResourceId: ${file(./env.yml):API_GW_ROOT_RESOURCE_ID}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - lambda:InvokeFunction
+        - lambda:InvokeAsync
+      Resource: "*"
+
+custom:
+  stage: ${opt:stage, 'dev'}
+  pythonRequirements:
+    dockerizePip: non-linux
+    noDeploy:
+      - boto3
+      - pytest
+      - pylint
+      - pytest
+      - pytest-mock
+  env: ${opt:stage, 'dev'}
+  logLevel: DEBUG
+  datadog:
+    enabled: true
+    site: ${file(./env.yml):DD_SITE}
+    addExtension: true
+    apiKey: ${file(./env.yml):DD_API_KEY}
+    enableDDTracing: true
+    enableDDLogs: true
+    enableXrayTracing: true
+    addLayers: true
+    env: ${opt:stage, 'dev'}
+
+plugins:
+  - serverless-python-requirements
+  - serverless-plugin-datadog
+
+package:
+  patterns:
+    - "!**"
+    - "__pycache__/**"
+    - ".env"
+    - "src/**"
+
+functions:
+  app:
+    name: backend-lambda-api
+    runtime: python3.9
+    architecture: arm64
+    handler: src.main.handler
+    memorySize: 512
+    maximumRetryAttempts: 0
+    logRetentionInDays: 14
+    timeout: 28
+    environment:
+      STAGE: ${opt:stage, 'dev'}
+      LOG_LEVEL: ${self:custom.logLevel}
+    events: ${file(./api-events.yml)}
