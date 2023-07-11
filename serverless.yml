@@ -4,6 +4,7 @@ useDotenv: true
 
 provider:
   name: aws
+  runtime: python3.9
   region: ${opt:region, 'us-east-1'}
   stackName: backend-api
   profile: ${file(./env.yml):AWS_PROFILE}
@@ -14,12 +15,14 @@ provider:
   apiGateway:
     restApiId: ${file(./env.yml):API_GW_ID}
     restApiRootResourceId: ${file(./env.yml):API_GW_ROOT_RESOURCE_ID}
-  iamRoleStatements:
-    - Effect: Allow
-      Action:
-        - lambda:InvokeFunction
-        - lambda:InvokeAsync
-      Resource: "*"
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - lambda:InvokeFunction
+            - lambda:InvokeAsync
+          Resource: "*"
 
 custom:
   stage: ${opt:stage, 'dev'}
@@ -29,8 +32,8 @@ custom:
       - boto3
       - pytest
       - pylint
-      - pytest
-      - pytest-mock
+      - ddtrace
+      - datadog-lambda
   env: ${opt:stage, 'dev'}
   logLevel: DEBUG
   datadog:
@@ -45,8 +48,8 @@ custom:
     env: ${opt:stage, 'dev'}
 
 plugins:
-  - serverless-python-requirements
   - serverless-plugin-datadog
+  - serverless-python-requirements
 
 package:
   patterns:
@@ -54,6 +57,7 @@ package:
     - "__pycache__/**"
     - ".env"
     - "src/**"
+    - "requirements.txt"
 
 functions:
   app:
